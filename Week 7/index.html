@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Trợ giúp</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/etienne-martin/Mapify/master/build/jquery.mapify.css">
+<link rel="stylesheet" href="main.css">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.rawgit.com/etienne-martin/Mapify/master/build/jquery.mapify.js"></script>
+</head>
+
+<body>
+<h1>I. Giao diện trò chơi</h1>
+<br>
+<p> Dù bạn bắt đầu bất kì kiểu chơi nào, giao diện của game đều thống nhất một kiểu cơ bản: </p>
+<div class="DivCenter"> <img id="imgPlayScene" width="1366px" height="768px" src="Training.svg" usemap="#Map">
+  <map name="Map" id="Map">
+    <area BoxTitle="Trả lời đúng!" Description="Nếu bạn thấy dấu check này thì bạn đã trả lời đúng rồi đấy ^^" shape="poly" coords="553,518,822,519,822,740,553,741"/>
+    <area BoxTitle="Phát âm" Description="Bạn đang gặp khó khăn với từ này? Liệu nghe phát âm có thể giúp được bạn? :D" shape="poly" coords="489,398,662,399,661,500,489,500"/>
+    <area BoxTitle="Nút hoàn tất" Description="Bạn có thể nhấn enter thay vì bấm nút này bằng chuột. Rất tiện đúng không!" shape="poly" coords="681,401,868,402,866,504,681,503"/>
+    <area BoxTitle="Đáp án của bạn" Description="Phiên âm của từ sẽ được gõ vào khung này. Lưu ý: Bạn phải đưa chúng vào cặp dấu '/' như từ điển của game nhé." shape="poly" coords="470,258,899,259,899,358,470,358"/>
+    <area BoxTitle="Ký tự đặc biệt" Description="Bảng kí tự đặc biệt. Bạn có thể click vào để chọn từ; hoặc giữ alt, dùng phím mũi tên rồi thả tay" shape="poly" coords="889,303,929,303,929,344,891,345"/>
+    <area BoxTitle="Từ cần phiên âm" Description="Trò chơi sẽ chọn cho bạn từ chỉ có 1 cách phiên âm nên bạn yên tâm nhé ^^" shape="poly" coords="550,132,821,133,820,226,552,225"/>
+    <area BoxTitle="Từ cần phiên âm" Description="Trò chơi sẽ chọn cho bạn từ chỉ có 1 cách phiên âm nên bạn yên tâm nhé ^^" shape="poly" coords="550,132,821,133,820,226,552,225"/>
+  </map>
+</div>
+<h1>II. Kiểu chơi</h1>
+<p> 
+3 kiểu chơi đa dạng, giúp bạn không cảm thấy chán nản trong quá trình vừa chơi vừa học!
+</p>
+<label class="ListItem"><i class="fa fa-arrow-circle-right" style="font-size:24px"></i>Parrot's Secrets</label><br>
+<label class="ListItem"><i class="fa fa-arrow-circle-right" style="font-size:24px"></i>Time Running</label><br>
+<label class="ListItem"><i class="fa fa-arrow-circle-right" style="font-size:24px"></i>Training</label><br>
+
+<h2>a. Parrot's Secrets: Những bí mật đang chờ đợi bạn</h2>
+<p>
+	Chú vẹt Echo do chúng mình (các dev dễ thương của game) huấn luyện rất thông minh, nhưng cậu ta cũng rất đãng trí đấy.
+</p>
+<p>
+	Echo được dạy phát âm các từ tiếng Anh rất phổ biến. Mãi đến 1 ngày, cậu nhóc giở chứng, quên mất nhiều từ chúng mình từng dạy. Mà khoan! Echo còn nhớ các từ liên quan đến kiến thức nó đã quên - đã nói nó thông mình mà. <b>Bằng các gợi ý, bạn có thể nhắc nó giùm chúng mình được không? ^^</b>
+</p>
+<h2>b. Time Running - đường đua tốc độ</h2>
+<p>
+	Kiến thức của bạn đã vững vàng? Time Running chắc hẵn là sự lựa chọn hoàn hảo.
+</p>
+<p>
+	Thành tích của bạn sẽ được tính theo số từ trong phần thi này. Thời gian bắt đầu là <b>1 phút 20 giây</b>. Với mỗi từ đúng, bạn sẽ có thêm 5 giây. Game sẽ không trừ thời gian nếu nhập sai. Mọi người chỉ có thể thấy top 3 thành tích tốt nhất và thứ hạng của chính họ.
+</p>
+<h2>c. Training - Có công mài sắt, có ngày nên kim</h2>
+<p>
+	Training là kiểu chơi giúp bạn tự rèn luyện mà không bị áp lực về mặt thành tích. Người chơi có thể chọn chủ đề họ muốn tham gia. Các chủ đề đã hoàn tất có thể chơi lại dễ dàng.
+</p>
+<!-- Scripts below -->
+<script type="text/javascript">
+	$("img[usemap]").mapify({
+	popOver: {
+		content: function(zone){ 
+			return "<strong>"+zone.attr("BoxTitle")+"</strong><br>"+zone.attr("Description");
+		},
+		delay: 0.7,
+		margin: "15px",
+		height: "130px",
+		width: "260px"
+	}
+});
+	</script>
+</body>
+</html>

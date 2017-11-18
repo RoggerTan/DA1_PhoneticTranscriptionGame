@@ -1,0 +1,59 @@
+@charset "utf-8";
+/* CSS Document */
+
+h1, h2, p {
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+}
+h1{
+	margin-bottom: 20px
+}
+h2 {
+	margin-left: 80px;
+	font-size: 25px;
+	margin-top: 20px;
+	margin-bottom: 0px;
+}
+p {
+	margin: 0px 100px 0px 100px;
+	margin-bottom: 0px;
+	font-size: 25px;
+	text-indent: 30px;
+	text-align: justify;
+}
+#imgPlayScene {
+}
+.DivCenter {
+	margin: 20px 50px 20px;
+}
+.mapify-hover {
+	fill: rgba(0,0,0,0.15);
+	stroke: #fff;
+	stroke-width: 2;
+}
+.mapify-popOver {
+	color: #000000;
+	font-size: 16px;
+	height: 130px;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+}
+.mapify-popOver-content {
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+i {
+	margin-right: 20px;
+}
+.ListItem, .ListItem:hover {
+	margin-left: 150px;
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+}
+.ListItem {
+	font-size: 25px;
+}
+.ListItem:hover {
+	font-size: 40px;
+	cursor: pointer;
+}
